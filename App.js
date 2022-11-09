@@ -1,14 +1,23 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
 
-export class App extends Component {
-  render() {
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+
+
+const Stack = createNativeStackNavigator();
+export default function App() {
+ 
     return (
-      <View>
-        <Text className="bg-red-500 text-2xl" >Fooddas</Text>
-      </View>
-    )
-  }
-}
+      
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen} />
+          </Stack.Navigator>
 
-export default App
+        </NavigationContainer>
+      
+    );
+  }
+
+
