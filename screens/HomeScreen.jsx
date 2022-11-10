@@ -77,7 +77,9 @@ const HomeScreen = () => {
         <Categories title="Pizza" img="../Assets/images/piz.png" />
       </ScrollView>
 
-      
+      <View>
+        
+      </View>
     </SafeAreaView>
   );
 };
