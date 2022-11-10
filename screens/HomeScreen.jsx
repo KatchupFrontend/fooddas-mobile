@@ -1,10 +1,11 @@
-import {View, Text, TextInput, Image, ScrollView} from 'react-native';
+import {View, Text, TextInput, Image, ScrollView, Flatlist} from 'react-native';
 import React, {useLayoutEffect} from 'react';
 import {SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Categories from '../components/Categories';
+import VendorCard from '../components/VendorCard';
 const HomeScreen = () => {
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -14,7 +15,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-white  h-full">
       <View className="mx-2 flex-row justify-between items-center">
         <View>
           <View className="m-1">
@@ -47,18 +48,19 @@ const HomeScreen = () => {
           <Icon name="options-outline" size={30} color="blue" />
         </View>
       </View>
-
-      <View className="py-5 mx-2">
+ <View className="mx-3 flex-row  justify-between items-center">
+  <Text className="font-bold text-lg py-2 text-red-500">Offers near you</Text>
+  <Icon name='arrow-forward-outline' size={30} color="blue"/>
+ </View>
+      {/* <View className="py-5 mx-2">
         <Image
           source={require('../Assets/images/flyer.png')}
           className="w-full rounded-2xl"
         />
-      </View>
+      </View> */}
 
-      <View className="py-3 flex-row justify-between items-center">
-        <Text className="font-semibold m-3 text-2xl text-black ">
-          Categories
-        </Text>
+      <View className="py-1  mt-2 flex-row justify-between items-center mx-4">
+        <Text className="font-semibold  text-2xl text-black ">Categories</Text>
         <Text className="text-lg m-1  text-blue-500">See all</Text>
       </View>
       <ScrollView
@@ -78,7 +80,64 @@ const HomeScreen = () => {
       </ScrollView>
 
       <View>
-        
+        <View className="flex-row justify-between mt-5 items-center mx-4">
+          <Text className="text-xl font-semibold text-black my-2">
+            Restaurant
+          </Text>
+          <Text className="text-lg text-blue-500">See all</Text>
+        </View>
+        <ScrollView
+          contentContainerStyle={{
+            paddingHorizontal: 15,
+            paddingTop: 10,
+          }}
+          horizontal
+          showsHorizontalScrollIndicator={false}>
+          <VendorCard
+            title="Pizza Hut"
+            description="Pizza, Burger, Noodles"
+            rating="4.5"
+            address="Main City, Kumasi"
+            dishes="Pizza, Burger, Noodles"
+          />
+          <VendorCard
+            title="Pizza Hut"
+            description="Pizza, Burger, Noodles"
+            rating="4.5"
+            address="Main City, Kumasi"
+            dishes="Pizza, Burger, Noodles"
+          />
+          <VendorCard
+            title="Pizza Hut"
+            description="Pizza, Burger, Noodles"
+            rating="4.5"
+            address="Main City, Kumasi"
+            dishes="Pizza, Burger, Noodles"
+          />
+          <VendorCard
+            title="Pizza Hut"
+            description="Pizza, Burger, Noodles"
+            rating="4.5"
+            address="Main City, Kumasi"
+            dishes="Pizza, Burger, Noodles"
+          />
+          <VendorCard
+            title="Pizza Hut"
+            description="Pizza, Burger, Noodles"
+            rating="4.5"
+            address="Main City, Kumasi"
+            dishes="Pizza, Burger, Noodles"
+          />
+        </ScrollView>
+      </View>
+
+      <View >
+        <View className="flex-row justify-between mt-5 items-center mx-4">
+          <Text className="text-xl font-semibold text-black my-2">
+            Popular Dishes
+          </Text>
+          <Text className="text-lg text-blue-500">See all</Text>
+          </View>
       </View>
     </SafeAreaView>
   );
