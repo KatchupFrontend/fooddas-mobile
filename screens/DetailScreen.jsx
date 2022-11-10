@@ -1,7 +1,11 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+
+ 
 const DetailScreen = () => {
+   
     const {params: {
         id,
         title,
@@ -10,10 +14,20 @@ const DetailScreen = () => {
         address,
         dishes,
     }} = useRoute();
+
+     const navigation = useNavigation();
+     useLayoutEffect(() => {
+       navigation.setOptions({
+         headerShown: false,
+       });
+     }, []);
+    
   return (
+    <ScrollView>
     <View>
-      <Text>{title}</Text>
+        <Image source={require('./Assets/images/')} />
     </View>
+    </ScrollView>
   )
 }
 
