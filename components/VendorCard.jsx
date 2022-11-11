@@ -9,12 +9,12 @@ const navigation = useNavigation();
 
 
   return (
-    <TouchableOpacity className="mx-2 bg-gray-200" onPress={() =>{
+    <TouchableOpacity className="mx-2 bg-gray-200 shadow-lg m-2 " onPress={() =>{
       navigation.navigate('DetailScreen', {id, title, description, rating, address,dishes,})
     }}>
       <Image
         source={require('../Assets/images/burger.png')}
-        className="h-36 w-64 rounded-sm"
+        className="h-36 w-[343px] rounded-sm "
       />
       <View className="px-3 pb-1">
         <View className="flex-row">

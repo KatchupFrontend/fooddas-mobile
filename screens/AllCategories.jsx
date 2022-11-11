@@ -3,6 +3,10 @@ import  Icon from 'react-native-vector-icons/Ionicons';
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
+import Categories from '../components/Categories';
+
+
+
 const AllCategories = () => {
     const navigation = useNavigation();
      useLayoutEffect(() => {
@@ -26,9 +30,172 @@ const AllCategories = () => {
             className="p-4 bg-red-500"
           />
         </TouchableOpacity>
-        <Text className="text-xl font-bold text-black m-2">More Categories</Text>
+        <Text className="text-xl font-bold text-black m-2">
+          More Categories
+        </Text>
       </View>
-    
+      <View className="flex-row flex-wrap justify-between mx-5">
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('AllCategories');
+          }}
+          className="flex-col items-center ">
+          <Categories />
+          <Text className="text-lg text-black text-center">Fast Food</Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 }

@@ -51,11 +51,12 @@ const HomeScreen = () => {
           <Icon name="options-outline" size={30} color="blue" />
         </View>
       </View>
-      <TouchableOpacity onPress={()=>{navigation.navigate('SpecialOffers')
-  }}>
-      
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('SpecialOffers');
+        }}>
         <View className="mx-3 flex-row  justify-between items-center">
-          <Text className="font-bold text-lg py-2 text-red-500">
+          <Text className="font-bold text-lg py-2 text-black">
             Offers near you
           </Text>
           <Icon name="arrow-forward-outline" size={30} color="blue" />
@@ -67,11 +68,17 @@ const HomeScreen = () => {
           className="w-full rounded-2xl"
         />
       </View> */}
-
-      <View className="py-1  mt-2 flex-row justify-between items-center mx-4">
-        <Text className="font-semibold  text-2xl text-black ">Categories</Text>
-        <Text className="text-lg m-1  text-blue-500">See all</Text>
-      </View>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('AllCategories');
+        }}>
+        <View className="py-1  mt-2 flex-row justify-between items-center mx-4">
+          <Text className="font-semibold  text-2xl text-black ">
+            Categories
+          </Text>
+          <Text className="text-lg m-1  text-blue-500">See all</Text>
+        </View>
+      </TouchableOpacity>
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 15,
