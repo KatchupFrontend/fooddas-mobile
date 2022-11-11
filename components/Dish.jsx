@@ -2,15 +2,28 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useDispatch, useSelector} from 'react-redux';
-import {addToCart, selectCartItems, selectCartItemsWithId} from '../features/cartSlice';
+import {
+  addToCart,
+  selectCartItems,
+  removeFromCart,
+  selectCartItemsWithId,
+} from '../features/cartSlice';
 
 const Dish = ({id, name, description, price, image}) => {
-  const items = useSelector((state)=>selectCartItemsWithId(state, id));
+  const [isPressed, setIsPressed] = useState(false);
+
+  const items = useSelector(state => selectCartItemsWithId(state, id));
   const dispatch = useDispatch();
   const addItemToCart = () => {
     dispatch(addToCart({id, name, price, description, image}));
   };
-  const [isPressed, setIsPressed] = useState(false);
+
+  const removeItemFromCart = () => {
+    if(!items.length > 0) return;
+    dispatch(removeFromCart({id}));
+  };
+
+
   return (
     <>
       <TouchableOpacity
@@ -47,7 +60,7 @@ const Dish = ({id, name, description, price, image}) => {
           <View>
             <TouchableOpacity className="">
               <View className="flex-row items-center space-x-2 pb-3">
-                <TouchableOpacity className="">
+                <TouchableOpacity className="" onPress={removeItemFromCart}>
                   <Icon
                     name="remove-circle"
                     className=""

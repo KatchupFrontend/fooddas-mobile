@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { Alert } from 'react-native';
 
 const initialState = {
 items: [],
@@ -16,7 +17,14 @@ export const cartSlice = createSlice({
       state.items  = [...state.items, action.payload];
     },
     removeFromCart: (state,action) => {
-      state.items -= 1;
+      const index = state.items.findIndex((item)=>item.id === action.payload.id);
+      let newCart = [...state.items];
+      if(index >= 0){
+        newCart.splice(index,1);
+      }else{
+        Alert.warn(`Cant remove product (id: ${action.payload.id}) as its not in the cart`);
+      }
+      state.items = newCart; 
     },
     // incrementByAmount: (state, action) => {
     //   state.items += action.payload;
