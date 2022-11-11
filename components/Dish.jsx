@@ -60,12 +60,12 @@ const Dish = ({id, name, description, price, image}) => {
           <View>
             <TouchableOpacity className="">
               <View className="flex-row items-center space-x-2 pb-3">
-                <TouchableOpacity className="" onPress={removeItemFromCart}>
+                <TouchableOpacity disabled={!items.length} className="" onPress={removeItemFromCart}>
                   <Icon
                     name="remove-circle"
                     className=""
                     size={40}
-                    color="red"
+                    color={items.length > 0 ? 'red' : 'gray'}
                   />
                 </TouchableOpacity>
                 <Text className="text-3xl font-bold">{items.length}</Text>
