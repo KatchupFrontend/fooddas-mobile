@@ -1,11 +1,14 @@
-import {View, Text, TextInput, Image, ScrollView, Flatlist} from 'react-native';
+import {View, Text, TextInput,TouchableOpacity, Image, ScrollView, Flatlist,} from 'react-native';
 import React, {useLayoutEffect} from 'react';
 import {SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Categories from '../components/Categories';
 import VendorCard from '../components/VendorCard';
+
+
+
+
 const HomeScreen = () => {
   const navigation = useNavigation();
   useLayoutEffect(() => {
@@ -48,10 +51,16 @@ const HomeScreen = () => {
           <Icon name="options-outline" size={30} color="blue" />
         </View>
       </View>
- <View className="mx-3 flex-row  justify-between items-center">
-  <Text className="font-bold text-lg py-2 text-red-500">Offers near you</Text>
-  <Icon name='arrow-forward-outline' size={30} color="blue"/>
- </View>
+      <TouchableOpacity onPress={()=>{navigation.navigate('SpecialOffers')
+  }}>
+      
+        <View className="mx-3 flex-row  justify-between items-center">
+          <Text className="font-bold text-lg py-2 text-red-500">
+            Offers near you
+          </Text>
+          <Icon name="arrow-forward-outline" size={30} color="blue" />
+        </View>
+      </TouchableOpacity>
       {/* <View className="py-5 mx-2">
         <Image
           source={require('../Assets/images/flyer.png')}
@@ -131,13 +140,13 @@ const HomeScreen = () => {
         </ScrollView>
       </View>
 
-      <View >
+      <View>
         <View className="flex-row justify-between mt-5 items-center mx-4">
           <Text className="text-xl font-semibold text-black my-2">
             Popular Dishes
           </Text>
           <Text className="text-lg text-blue-500">See all</Text>
-          </View>
+        </View>
       </View>
     </SafeAreaView>
   );

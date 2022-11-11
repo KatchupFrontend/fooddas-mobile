@@ -1,12 +1,14 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native';
-import React from 'react';
-import { Icon } from 'react-native-vector-icons/Ionicons';
+import React, {useState} from 'react';
+import {Icon} from 'react-native-vector-icons/Ionicons';
 
 const Dish = () => {
-    const {isPressed, setIsPressed} = React.useState(false);
+  const [isPressed, setIsPressed] = useState(false);
   return (
     <>
-      <TouchableOpacity className="bg-white p-4 border-gray-200 border">
+      <TouchableOpacity
+       
+        className="bg-white p-4 border-gray-200 border">
         <View className="flex-row items-center">
           <View className="flex-1 pr-2">
             <Text className="text-lg mb-1">Burger</Text>
@@ -15,8 +17,9 @@ const Dish = () => {
               consectetur adipisicing eli facere provident mollitia sapiente
               ipsa delectu
             </Text>
+            <Text className="">Ghc 25</Text>
           </View>
-          <Text className="m-3">Ghc 25</Text>
+
           <View>
             <Image
               style={{
@@ -29,15 +32,16 @@ const Dish = () => {
           </View>
         </View>
       </TouchableOpacity>
-      {
-        isPressed && (
-            <View>
-                <TouchableOpacity>
-                   <Icon name="remove-outline" size={20} />
-
-                </TouchableOpacity>
-            </View>
-      }
+      {isPressed && (
+        <View>
+          <View>
+            <TouchableOpacity>
+              <Icon name="remove-outline" size={35} color="red" />
+              {/* <Icon name="remove-outline" size={40} color={items.length > 0 ? "blue" : "gray"} /> */}
+            </TouchableOpacity>
+          </View>
+        </View>
+      )}
     </>
   );
 };

@@ -1,9 +1,12 @@
 import { Image, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-
+import { useNavigation } from '@react-navigation/native'
 const Categories = ({title}) => {
+  const navigation = useNavigation();
   return (
-   <TouchableOpacity>
+   <TouchableOpacity onPress={()=>{
+      navigation.navigate('AllCategories')
+   }}>
     <Image source={require('../Assets/images/piz.png')} className="rounded-full w-20 h-20"/>
     <Text className="text-lg text-black text-center">{title}</Text>
    </TouchableOpacity>
