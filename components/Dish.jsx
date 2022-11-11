@@ -2,10 +2,10 @@ import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useDispatch, useSelector} from 'react-redux';
-import {addToCart, selectCartItems} from '../features/cartSlice';
+import {addToCart, selectCartItems, selectCartItemsWithId} from '../features/cartSlice';
 
 const Dish = ({id, name, description, price, image}) => {
-  const items = useSelector(selectCartItems);
+  const items = useSelector((state)=>selectCartItemsWithId(state, id));
   const dispatch = useDispatch();
   const addItemToCart = () => {
     dispatch(addToCart({id, name, price, description, image}));

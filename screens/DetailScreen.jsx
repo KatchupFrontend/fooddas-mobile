@@ -68,20 +68,23 @@ const DetailScreen = () => {
         <Text className="px-4 pt-6 mb-3 font-bold text-xl text-black">
           Menu
         </Text>
-        <Dish
+        <Dish 
+        id={1}
           name="Burger"
           description="lorem loremdkfnkdfnkndfgkdnfkgndkfdkfngkdfnkgndfkgnkdfngdf "
           price=" 20"
           image={require('../Assets/images/burger.png')}
         />
         <Dish
-          name="Burger"
+        id={2}
+          name="Chips"
           description="lorem loremdkfnkdfnkndfgkdnfkgndkfdkfngkdfnkgndfkgnkdfngdf "
           price=" 20"
           image={require('../Assets/images/burger.png')}
         />
-        <Dish
-          name="Burger"
+        <Dish 
+        id={3}
+          name="Pizza"
           description="lorem loremdkfnkdfnkndfgkdnfkgndkfdkfngkdfnkgndfkgnkdfngdf "
           price=" 20"
           image={require('../Assets/images/burger.png')}
