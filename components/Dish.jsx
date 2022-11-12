@@ -1,10 +1,10 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
+import Currency from 'react-currency-formatter';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   addToCart,
-  selectCartItems,
   removeFromCart,
   selectCartItemsWithId,
 } from '../features/cartSlice';
@@ -40,7 +40,9 @@ const Dish = ({id, name, description, price, image}) => {
               ipsa delectu */}
               {description}
             </Text>
-            <Text className="">Ghc {price}</Text>
+            <Text>
+            Ghc  {price}
+            </Text>
           </View>
 
           <View>
@@ -60,7 +62,10 @@ const Dish = ({id, name, description, price, image}) => {
           <View>
             <TouchableOpacity className="">
               <View className="flex-row items-center space-x-2 pb-3">
-                <TouchableOpacity disabled={!items.length} className="" onPress={removeItemFromCart}>
+                <TouchableOpacity
+                  disabled={!items.length}
+                  className=""
+                  onPress={removeItemFromCart}>
                   <Icon
                     name="remove-circle"
                     className=""
