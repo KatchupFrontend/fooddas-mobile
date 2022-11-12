@@ -27,7 +27,7 @@ export default function App() {
               name="FoodListingScreen"
               component={FoodListingScreen}
             />
-            <Stack.Screen name="CartScreen" component={CartScreen} options={{presentation: 'modal', headerShown:false}} />
+            <Stack.Screen name="Cart" component={CartScreen} options={{presentation: "modal", headerShown:false, animation:"slide_from_bottom"  }}  />
           </Stack.Navigator>
         </Provider>
       </NavigationContainer>

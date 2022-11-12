@@ -11,7 +11,8 @@ const Cart = () => {
     const cartTotal = useSelector(selectCartTotal);
   return (
     <View className="absolute w-full bottom-10 z-30 ">
-      <TouchableOpacity className=" bg-red-500 mx-5 p-4 rounded-lg   flex-row items-center space-x-1">
+      <TouchableOpacity className=" bg-red-500 mx-5 p-4 rounded-lg   flex-row items-center space-x-1" onPress={()=>
+      navigation.navigate('Cart')}>
         <Text className="text-white font-bold bg-red-800 py-1 px-2 rounded-md">
           {items.length}
         </Text>
