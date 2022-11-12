@@ -1,12 +1,15 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native'
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { useRoute } from '@react-navigation/native';
 import {useNavigation} from '@react-navigation/native';
 import Icon  from 'react-native-vector-icons/Ionicons';
 import Dish from '../components/Dish';
 import Cart from '../components/Cart';
+import { useDispatch } from 'react-redux';
+import { setVendor } from '../features/VendorSlice';
  
 const DetailScreen = () => {
+  const dispatch = useDispatch();
    
     const {params: {
         id,
@@ -23,6 +26,20 @@ const DetailScreen = () => {
          headerShown: false,
        });
      }, []);
+
+
+     useEffect(() =>{
+     dispatch(
+       setVendor({
+         id,
+         title,
+         description,
+         rating,
+         address,
+         dishes,
+       }),
+     );
+     }, [dispatch])
     
   return (
     <>
