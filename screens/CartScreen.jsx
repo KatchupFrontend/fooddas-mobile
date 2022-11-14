@@ -13,7 +13,9 @@ const CartScreen = () => {
 
 
     useMemo(() => {
-        
+        const groupedItems = items.reduce(() => {
+            (results[item.id] = results[item.id] || []).push(item)
+        })
     }, [items])
   return (
     <View className="">

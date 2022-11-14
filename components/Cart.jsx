@@ -9,6 +9,7 @@ const Cart = () => {
     const items = useSelector(selectCartItems);
     const navigation = useNavigation();
     const cartTotal = useSelector(selectCartTotal);
+    if (items.length === 0) return null;
   return (
     <View className="absolute w-full bottom-10 z-30 ">
       <TouchableOpacity className=" bg-red-500 mx-5 p-4 rounded-lg   flex-row items-center space-x-1" onPress={()=>
