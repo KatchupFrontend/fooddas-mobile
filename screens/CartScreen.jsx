@@ -4,6 +4,8 @@ import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectVendor } from '../features/VendorSlice';
 import { selectCartItems } from '../features/cartSlice';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import  Icon  from 'react-native-vector-icons/Ionicons';
 
 const CartScreen = () => {
     const navigation = useNavigation();
@@ -20,11 +22,17 @@ const CartScreen = () => {
         setGroupedItemsInCArt(groupedItems);
     }, [items])
   return (
-    <View className="">
-      <Text>
-        dfgdfhd
-      </Text>
-    </View>
+   <SafeAreaView>
+    <view>
+      <View>
+        <Text>CART</Text>
+        <Text>vendor</Text>
+      </View>
+      <TouchableOpacity onPres={navigation.goBack} className="rounded-full bg-gray-100 absolute top-3 right-3">
+        <Icon color="blue" height={50} width={50} />
+      </TouchableOpacity>
+    </view>
+   </SafeAreaView>
   )
 }
 
