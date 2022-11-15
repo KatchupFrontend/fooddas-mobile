@@ -10,7 +10,7 @@ import FoodListingScreen from './screens/FoodListingScreen';
 import { Provider } from 'react-redux';
 import {store} from './store'
 import CartScreen from './screens/CartScreen';
-
+import PayMethodScreen from './screens/PayMethodScreen';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -27,7 +27,16 @@ export default function App() {
               name="FoodListingScreen"
               component={FoodListingScreen}
             />
-            <Stack.Screen name="Cart" component={CartScreen} options={{presentation: "modal", headerShown:false, animation:"slide_from_bottom"  }}  />
+            <Stack.Screen
+              name="Cart"
+              component={CartScreen}
+              options={{
+                presentation: 'modal',
+                headerShown: false,
+                animation: 'slide_from_bottom',
+              }}
+            />
+            <Stack.Screen name="PayMethodScreen" component={PayMethodScreen} />
           </Stack.Navigator>
         </Provider>
       </NavigationContainer>
