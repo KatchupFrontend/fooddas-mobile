@@ -83,7 +83,9 @@ const CartScreen = () => {
             <Text className="text-black font-extrabold text-lg">Order Total</Text>
             <Text className="text-black font-extrabold text-lg">{cartTotal + 4}.00</Text>
           </View>
-          <TouchableOpacity className="rounded-lg bg-red-500 p-4 mx-4" onPress={navigation.navigate('PayMethodScreen')}>
+          <TouchableOpacity className="rounded-lg bg-red-500 p-4 mx-4" onPress={()=>
+            navigation.navigate('PayMethodScreen')
+          }>
          
             <Text className="text-center text-lg font-bold text-white">Place Order</Text>
           </TouchableOpacity>
