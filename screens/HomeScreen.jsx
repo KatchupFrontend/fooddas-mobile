@@ -53,7 +53,7 @@ const HomeScreen = () => {
       </View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('SpecialOffers');
+          navigation.navigate('SignUpScreen');
         }}>
         <View className="mx-3 flex-row  justify-between items-center">
           <Text className="font-bold text-lg py-2 text-black">

@@ -17,7 +17,7 @@ const navigation = useNavigation();
         className="h-36 w-[343px] rounded-sm "
       />
       <View className="px-3 pb-1">
-        <View className="flex-row">
+        <View className="flex-row items-center">
           <Text className="font-bold text-lg px-3 ">{title}</Text>
           <Icon name="star-outline" size={17} color="blue" />
         </View>

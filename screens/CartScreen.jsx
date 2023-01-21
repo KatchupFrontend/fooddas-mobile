@@ -16,15 +16,16 @@ const CartScreen = () => {
     const dispatch = useDispatch();
 
 
-    useMemo(() => {
-        const groupedItems = items.reduce((results, item) => {
-            (results[item.id] = results[item.id] || []).push(item)
-        })
-        setGroupedItemsInCart(groupedItems);
-    }, [items])
+    // useMemo(() => {
+    //     const groupedItems = items.reduce((results, item) => {
+    //         (results[item.id] = results[item.id] || []).push(item)
+    //     })
+    //     setGroupedItemsInCart(groupedItems);
+    // }, [items])
   return (
-    <SafeAreaView className="flex-1 bg-white">
-      <View className="flex-1 bg-gray-100">
+    <SafeAreaView className="flex-1 bg-white ">
+    <Text className="text-xl font-bold text-center">Cart</Text>
+      {/* <View className="flex-1 bg-gray-100">
         <View className="p-5 border-b border-red-300 bg-white shadow-xl ">
           <Text className="text-lg font-bold text-center text-black">CART</Text>
           
@@ -45,7 +46,7 @@ const CartScreen = () => {
           </TouchableOpacity>
         </View>
         <View>
-          <ScrollView className="divide-y divide-gray-300 ">
+          {/* <ScrollView className="divide-y divide-gray-300 ">
             {Object.entries(groupedItemsInCart).map(([key, items]) => (
               <View
                 key={key}
@@ -66,11 +67,11 @@ const CartScreen = () => {
                 </TouchableOpacity>
               </View>
             ))}
-          </ScrollView>
-          <View className="p-5 bg-white mt-5 space-y-4">
+          </ScrollView> */}
+          {/* <View className="p-5 bg-white mt-5 space-y-4">
             <View className="flex-row justify-between bg-white items-center ">
               <Text className="text-gray-400 text-lg">Subtotal</Text>
-              <Text className="text-gray-400 text-lg">{cartTotal}</Text>
+              <Text className="text-gray-400 text-lg">''</Text>
             </View>
           </View>
           <View className="">
@@ -90,7 +91,7 @@ const CartScreen = () => {
             <Text className="text-center text-lg font-bold text-white">Place Order</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 }
