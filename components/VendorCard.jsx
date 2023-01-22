@@ -16,13 +16,12 @@ const navigation = useNavigation();
         source={require('../Assets/images/burger.png')}
         className="h-36 w-[343px] rounded-sm "
       />
-      <View className="px-3 pb-1">
+      <View className="px-3 pb-1 bg-white">
         <View className="flex-row items-center">
-          <Text className="font-bold text-lg px-3 ">{title}</Text>
-          <Icon name="star-outline" size={17} color="blue" />
-        </View>
+          <Text className="font-bold text-lg px-3 text-black">{title}</Text>
+          </View>
 
-        <View></View>
+      
         <Text className="text-sm text-gray-500">{description}</Text>
         <Text className="text-sm text-gray-500">{address}</Text>
       </View>

@@ -18,7 +18,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white  h-full">
+    <ScrollView className="bg-white  h-full">
       <View className="mx-2 flex-row justify-between items-center">
         <View>
           <View className="m-1">
@@ -155,7 +155,7 @@ const HomeScreen = () => {
           <Text className="text-lg text-blue-500">See all</Text>
         </View>
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
