@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { useLayoutEffect } from 'react';
-import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, SafeAreaView, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 const SignUpScreen = () => {
  
@@ -13,6 +13,7 @@ const SignUpScreen = () => {
    }, []);
   return (
     <ScrollView className="bg-white">
+        
       <View className="flex-row justify-between mx-4 py-5 ">
         <TouchableOpacity
           onPress={() => {
@@ -54,13 +55,20 @@ const SignUpScreen = () => {
 
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate('SignUpScreen');
+            navigation.navigate('LoginScreen');
           }}
           className="bg-red-500 rounded-lg w-[360px] mt-10 py-3">
           <Text className="text-center text-white font-bold text-xl">
             Sign Up
           </Text>
         </TouchableOpacity>
+
+
+        <Text className="py-4 text-lg">
+            Already have an account? <Text onPress={() => navigation.navigate('LoginScreen')} className="text-red-500">Login</Text>
+
+
+        </Text>
        
        
       </View>

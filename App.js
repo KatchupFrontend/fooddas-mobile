@@ -12,6 +12,7 @@ import {store} from './store'
 import CartScreen from './screens/CartScreen';
 import PayMethodScreen from './screens/PayMethodScreen';
 import SignUpScreen from './screens/SignUpScreen';
+import LoginScreen from './screens/LoginScreen';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
             <Stack.Screen name="SpecialOffers" component={SpecialOffers} />
             <Stack.Screen name="AllCategories" component={AllCategories} />
             <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+            <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen
               name="FoodListingScreen"
               component={FoodListingScreen}
