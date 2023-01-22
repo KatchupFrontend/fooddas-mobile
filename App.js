@@ -19,30 +19,35 @@ export default function App() {
  
     return (
       <NavigationContainer>
-        <Provider store={store}>
-          <Stack.Navigator>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="DetailScreen" component={DetailScreen} />
-            <Stack.Screen name="SpecialOffers" component={SpecialOffers} />
-            <Stack.Screen name="AllCategories" component={AllCategories} />
-            <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
-            <Stack.Screen name="LoginScreen" component={LoginScreen} />
-            <Stack.Screen
-              name="FoodListingScreen"
-              component={FoodListingScreen}
-            />
-            <Stack.Screen
-              name="Cart"
-              component={CartScreen}
-              options={{
-                presentation: 'modal',
-                headerShown: false,
-                animation: 'slide_from_bottom',
-              }}
-            />
-            <Stack.Screen name="PayMethodScreen" component={PayMethodScreen} />
-          </Stack.Navigator>
-        </Provider>
+        
+          <Provider store={store}>
+            <Stack.Navigator>
+              <Stack.Screen name="Home" component={HomeScreen} />
+              <Stack.Screen name="DetailScreen" component={DetailScreen} />
+              <Stack.Screen name="SpecialOffers" component={SpecialOffers} />
+              <Stack.Screen name="AllCategories" component={AllCategories} />
+              <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+              <Stack.Screen name="LoginScreen" component={LoginScreen} />
+              <Stack.Screen
+                name="FoodListingScreen"
+                component={FoodListingScreen}
+              />
+              <Stack.Screen
+                name="Cart"
+                component={CartScreen}
+                options={{
+                  presentation: 'modal',
+                  headerShown: false,
+                  animation: 'slide_from_bottom',
+                }}
+              />
+              <Stack.Screen
+                name="PayMethodScreen"
+                component={PayMethodScreen}
+              />
+            </Stack.Navigator>
+          </Provider>
+        
       </NavigationContainer>
     );
   }
