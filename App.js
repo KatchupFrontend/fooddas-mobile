@@ -39,6 +39,7 @@ export default function App() {
                   presentation: 'modal',
                   headerShown: false,
                   animation: 'slide_from_bottom',
+              
                 }}
               />
               <Stack.Screen
