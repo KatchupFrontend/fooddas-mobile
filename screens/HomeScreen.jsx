@@ -4,7 +4,6 @@ import {SafeAreaView} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Categories from '../components/Categories';
-import VendorCard from '../components/VendorCard';
 
 
 
@@ -109,7 +108,9 @@ const HomeScreen = () => {
           }}
           horizontal
           showsHorizontalScrollIndicator={false}>
-          <VendorCard
+
+           
+          {/* <VendorCard
             title="Pizza Hut"
             description="Pizza, Burger, Noodles"
             rating="4.5"
@@ -143,7 +144,7 @@ const HomeScreen = () => {
             rating="4.5"
             address="Main City, Kumasi"
             dishes="Pizza, Burger, Noodles"
-          />
+          /> */}
         </ScrollView>
       </View>
 

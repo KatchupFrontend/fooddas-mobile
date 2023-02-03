@@ -6,6 +6,36 @@ import { useNavigation } from '@react-navigation/native';
 const VendorCard = ({id, title, description, rating, address,dishes,}) => {
 const navigation = useNavigation();
 
+ const {data} = useFetchCollection('products');
+ const dispatch = useDispatch();
+ const products = useSelector(selectProducts);
+ const [category, setCategory] = useState('All');
+ const [city, setCity] = useState('All');
+ const [isloading, setIsloading] = useState(true);
+
+ //loading state
+
+ const allCategories = [
+   'All',
+   ...new Set(products.map(product => product.category)),
+ ];
+
+ const Cities = ['All', ...new Set(products.map(product => product.city))];
+
+ const [search, setSearch] = useState('');
+ const filteredProducts = useSelector(selectFilteredProducts);
+
+ useEffect(() => {
+   dispatch(FILTER_BY_SEARCH({search, products: products}));
+ }, [search, dispatch, products]);
+
+ useEffect(() => {
+   dispatch(
+     STORE_PRODUCTS({
+       products: data,
+     }),
+   );
+ }, [dispatch, data, products, city]);
 
 
   return (

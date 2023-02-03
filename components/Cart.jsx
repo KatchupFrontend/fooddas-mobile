@@ -9,6 +9,9 @@ const Cart = () => {
     const items = useSelector(selectCartItems);
     const navigation = useNavigation();
     const cartTotal = useSelector(selectCartTotal);
+
+
+    
     if (items.length === 0) return null;
   return (
     <View className="absolute w-full bottom-10 z-30 ">
