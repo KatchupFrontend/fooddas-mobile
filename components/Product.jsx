@@ -23,3 +23,5 @@ const Product = ({product, navigation}) => {
         </TouchableOpacity>
     );
     }
+
+export default Product

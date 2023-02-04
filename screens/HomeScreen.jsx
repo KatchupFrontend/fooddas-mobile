@@ -1,14 +1,24 @@
 import {View, Text, TextInput,TouchableOpacity, Image, ScrollView, Flatlist,} from 'react-native';
 import React, {useLayoutEffect} from 'react';
-import {SafeAreaView} from 'react-native';
+
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Categories from '../components/Categories';
+import Product from '../components/Product';
+import useFetchCollection from '../customHooks/useFetchCollection';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectProducts } from '../redux/slice/productSlice';
 
 
 
 
 const HomeScreen = () => {
+
+
+ const {data} = useFetchCollection('products');
+ const dispatch = useDispatch();
+ const products = useSelector(selectProducts);
+
   const navigation = useNavigation();
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -109,7 +119,7 @@ const HomeScreen = () => {
           horizontal
           showsHorizontalScrollIndicator={false}>
 
-           
+         
           {/* <VendorCard
             title="Pizza Hut"
             description="Pizza, Burger, Noodles"
