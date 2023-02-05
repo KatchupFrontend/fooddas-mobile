@@ -23,7 +23,7 @@ export default function App() {
           <Provider store={store}>
             <Stack.Navigator>
               <Stack.Screen name="Home" component={HomeScreen} />
-              <Stack.Screen name="DetailScreen" component={DetailScreen} />
+              {/* <Stack.Screen name="DetailScreen" component={DetailScreen} />
               <Stack.Screen name="SpecialOffers" component={SpecialOffers} />
               <Stack.Screen name="AllCategories" component={AllCategories} />
               <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
@@ -45,7 +45,7 @@ export default function App() {
               <Stack.Screen
                 name="PayMethodScreen"
                 component={PayMethodScreen}
-              />
+              /> */}
             </Stack.Navigator>
           </Provider>
         
